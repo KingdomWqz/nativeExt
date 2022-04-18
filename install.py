@@ -27,12 +27,12 @@ data["allowed_origins"][0] = "chrome-extension://" + id + "/"
 with open("manifest.json", "w") as file:
     json.dump(data, file, ensure_ascii=False)
 
-subkey = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
-winreg.CreateKey(winreg.HKEY_LOCAL_MACHINE, subkey)
-winreg.SetValue(winreg.HKEY_LOCAL_MACHINE, subkey,
+machine_subkey = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
+winreg.CreateKey(winreg.HKEY_LOCAL_MACHINE, machine_subkey)
+winreg.SetValue(winreg.HKEY_LOCAL_MACHINE, machine_subkey,
                 winreg.REG_SZ, os.getcwd() + "\manifest.json")
 
-subkey1 = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
-winreg.CreateKey(winreg.HKEY_CURRENT_USER, subkey1)
-winreg.SetValue(winreg.HKEY_CURRENT_USER, subkey1,
+user_subkey = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
+winreg.CreateKey(winreg.HKEY_CURRENT_USER, user_subkey)
+winreg.SetValue(winreg.HKEY_CURRENT_USER, user_subkey,
                 winreg.REG_SZ, os.getcwd() + "\manifest.json")
