@@ -31,3 +31,8 @@ subkey = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
 winreg.CreateKey(winreg.HKEY_LOCAL_MACHINE, subkey)
 winreg.SetValue(winreg.HKEY_LOCAL_MACHINE, subkey,
                 winreg.REG_SZ, os.getcwd() + "\manifest.json")
+
+subkey1 = r'SOFTWARE\Google\Chrome\NativeMessagingHosts\zrpa.chrome.bridge'
+winreg.CreateKey(winreg.HKEY_CURRENT_USER, subkey1)
+winreg.SetValue(winreg.HKEY_CURRENT_USER, subkey1,
+                winreg.REG_SZ, os.getcwd() + "\manifest.json")
