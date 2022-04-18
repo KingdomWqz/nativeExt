@@ -1,9 +1,1 @@
-{
-    "name": "zrpa.chrome.bridge",
-    "description": "zRPA chrome bridge",
-    "path": "ShadowBot.ChromeBridge.exe",
-    "type": "stdio",
-    "allowed_origins": [
-        "chrome-extension://nhkjnlcggomjhckdeamipedlomphkepc/"
-    ]
-}
+{"name": "zrpa.chrome.bridge", "description": "zRPA chrome bridge", "path": "ShadowBot.ChromeBridge.exe", "type": "stdio", "allowed_origins": ["chrome-extension://nkipiccjeedpjccolcamhenbjijiggef/"]}
