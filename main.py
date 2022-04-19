@@ -22,10 +22,6 @@ def send_message(msg):
 
 def read_thread_func(queue):
     while 1:
-        with open("test.txt", "a+") as file:
-            file.write("sdfsdf")
-            file.close()
-
         txt_length_bytes = sys.stdin.buffer.read(4)
 
         if len(txt_length_bytes) == 0:
