@@ -14,8 +14,16 @@ function connect() {
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('connect-button').addEventListener(
         'click', connect);
+    document.getElementById('send-message-button').addEventListener(
+        'click', sendNativeMessage);
 });
 
-function onNativeMessage() {
-    appendMessage("Received message: <b>" + JSON.stringify(message) + "</b>");
+function sendNativeMessage() {
+    message = {"text": document.getElementById('input-text').value};
+    port.postMessage(message);
+    appendMessage("Sent message: <b>" + JSON.stringify(message) + "</b>");
+  }
+
+function onNativeMessage(msg) {
+    appendMessage("Received message: <b>" + JSON.stringify(msg) + "</b>");
 }
