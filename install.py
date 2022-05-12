@@ -23,7 +23,11 @@ print(id)
 
 with open("manifest.json", "r", encoding="utf-8") as file:
     data = json.load(file)
+
+# path && allowed_origins
+data['path'] = os.getcwd() + '\main.bat'
 data["allowed_origins"][0] = "chrome-extension://" + id + "/"
+
 with open("manifest.json", "w") as file:
     json.dump(data, file, ensure_ascii=False)
 

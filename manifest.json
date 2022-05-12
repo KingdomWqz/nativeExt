@@ -1,1 +1,1 @@
-{"name": "zrpa.chrome.bridge", "description": "zRPA chrome bridge", "path": "main.bat", "type": "stdio", "allowed_origins": ["chrome-extension://nkipiccjeedpjccolcamhenbjijiggef/"]}
+{"name": "zrpa.chrome.bridge", "description": "zRPA chrome bridge", "path": "D:\\workspaces\\nativeExt\\main.bat", "type": "stdio", "allowed_origins": ["chrome-extension://nkipiccjeedpjccolcamhenbjijiggef/"]}
